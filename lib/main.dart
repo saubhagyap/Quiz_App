@@ -28,7 +28,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List scoreKeeper = [
+  List<Icon> scoreKeeper = [
     Icon(
       Icons.check,
       color: Colors.green,
@@ -76,6 +76,14 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked true.
+                setState(() {
+                  scoreKeeper.add(
+                    Icon(
+                      Icons.check,
+                      color: Colors.green,
+                    ),
+                  );
+                });
               },
             ),
           ),
@@ -95,17 +103,23 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked false.
+                setState(() {
+                  scoreKeeper.add(Icon(
+                    Icons.close,
+                    color: Colors.red,
+                  ));
+                });
               },
             ),
           ),
         ),
         Row(
-          children: 
+          children: scoreKeeper,
         ),
       ],
     );
   }
-}
+} 
 
 /*
 question1: 'You can lead a cow down stairs but not up stairs.', false,
