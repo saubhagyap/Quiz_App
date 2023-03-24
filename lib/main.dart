@@ -56,7 +56,7 @@ class _QuizPageState extends State<QuizPage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 240, 236, 236),
                 ),
               ),
             ),
@@ -100,7 +100,8 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: TextButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red)),
+                  backgroundColor: MaterialStateProperty.all(
+                      Color.fromARGB(255, 250, 57, 44))),
               child: Text(
                 'False',
                 style: TextStyle(
