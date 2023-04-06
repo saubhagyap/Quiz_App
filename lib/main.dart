@@ -50,12 +50,12 @@ class _QuizPageState extends State<QuizPage> {
         scoreKeeper = [];
       } else {
         if (userPickedAnswer == correctanswers) {
-          scoreKeeper.add(Icon(
+          scoreKeeper.add(const Icon(
             Icons.check,
             color: Colors.green,
           ));
         } else {
-          scoreKeeper.add(Icon(
+          scoreKeeper.add(const Icon(
             Icons.close,
             color: Colors.red,
           ));
@@ -75,12 +75,12 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           flex: 5,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Center(
               child: Text(
                 quizBrain.getQuestionText(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25.0,
                   color: Color.fromARGB(255, 240, 236, 236),
                 ),
@@ -90,11 +90,11 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: TextButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.green)),
-              child: Text(
+              child: const Text(
                 'True',
                 style: TextStyle(
                   color: Colors.white,
@@ -111,12 +111,12 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: TextButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                      Color.fromARGB(255, 250, 57, 44))),
-              child: Text(
+                      const Color.fromARGB(255, 250, 57, 44))),
+              child: const Text(
                 'False',
                 style: TextStyle(
                   fontSize: 20.0,
